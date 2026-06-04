@@ -8,4 +8,6 @@ fi
 FILE=$1
 OUTPUT=$(basename "$FILE" .cpp)
 
-g++ "$FILE" -o "$OUTPUT" && ./"$OUTPUT"
+#g++ "$FILE" -o "$OUTPUT" && ./"$OUTPUT"
+
+/opt/homebrew/bin/g++-15 "$FILE" -o "$OUTPUT" && ./"$OUTPUT" && rm "$OUTPUT"
