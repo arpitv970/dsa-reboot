@@ -51,6 +51,20 @@ int getHcf(int n, int m) {
   return hk;
 }
 
+int gcdEuclid(int n, int m) {
+  while (n > 0 && m > 0) {
+    if (n > m) {
+      n = n % m;
+    } else {
+      m = m % n;
+    }
+  }
+
+  if (n == 0)
+    return m;
+  return n;
+}
+
 int main() {
   int n, m;
 
@@ -69,7 +83,8 @@ int main() {
 
   cout << endl;
 
-  int hcf = getHcf(n, m);
+  // int hcf = getHcf(n, m);
+  int hcf = gcdEuclid(n, m);
 
   cout << "HCF: " << hcf << endl;
 
