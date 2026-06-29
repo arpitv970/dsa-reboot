@@ -35,7 +35,7 @@ vector<int> revArrP(vector<int> &v) {
   int first = *v.begin();
 
   v.erase(v.begin());
-  ans = revArr(v, 0);
+  ans = revArrP(v);
 
   ans.push_back(first);
 
